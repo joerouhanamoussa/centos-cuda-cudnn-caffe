@@ -20,7 +20,7 @@ The following commands can be used to verify that CUDA and Caffe work as expecte
 
 ```bash
 docker run ... /opt/deviceQuery
-docker run ... <docker image> /opt/bandwidthTest
-docker run ... <docker image> /bin/bash -c "cd /opt/caffe; make runtest -j<number of cores>"
-docker run ... <docker image> /bin/bash -c "cd /opt/caffe; ./examples/cifar10/train_quick.sh"
+docker run ... /opt/bandwidthTest
+docker run ... /bin/bash -c "cd /opt/caffe; make runtest -j<number of cores>"
+docker run ... /bin/bash -c "cd /opt/caffe; ./examples/cifar10/train_quick.sh"
 ```bash
