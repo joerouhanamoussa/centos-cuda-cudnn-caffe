@@ -19,6 +19,7 @@ docker run -it --device /dev/nvidia0:/dev/nvidia0 --device /dev/nvidia1:/dev/nvi
 The following commands can be used to verify that CUDA and Caffe work as expected:
 
 ```bash
+docker run ... nvidia-smi
 docker run ... /opt/deviceQuery
 docker run ... /opt/bandwidthTest
 docker run ... /bin/bash -c "cd /opt/caffe; make runtest -j<number of cores>"
