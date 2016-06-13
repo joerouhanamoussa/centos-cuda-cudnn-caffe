@@ -24,4 +24,4 @@ docker run ... /opt/deviceQuery
 docker run ... /opt/bandwidthTest
 docker run ... /bin/bash -c "cd /opt/caffe; make runtest -j<number of cores>"
 docker run ... /bin/bash -c "cd /opt/caffe; ./examples/cifar10/train_quick.sh"
-```bash
+```
