@@ -1,4 +1,4 @@
-# A Docker container with the NVIDIA drivers, CUDA Toolkit, cuDNN library and Caffe installed.
+# A Docker container with the NVIDIA drivers, CUDA Toolkit, cuDNN library and Caffe installed
 
 ### Docker build arguments
 
