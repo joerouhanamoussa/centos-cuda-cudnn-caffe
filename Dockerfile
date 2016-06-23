@@ -23,7 +23,9 @@ MAINTAINER Thomas Schaffter <thomas.schaffter@gmail.com>
 # docker run ... /bin/bash -c "cd /opt/caffe; ./examples/cifar10/train_quick.sh"
 
 ENV CUDA_RPM http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-rhel7-7-5-local-7.5-18.x86_64.rpm
-ENV NVIDIA_DRIVERS_RUN http://us.download.nvidia.com/XFree86/Linux-x86_64/352.79/NVIDIA-Linux-x86_64-352.79.run
+# The version of the NVIDIA drivers installed on SoftLayer is 352.79. The version 352.63 is currently used by the Amazon cluster.
+#ENV NVIDIA_DRIVERS_RUN http://us.download.nvidia.com/XFree86/Linux-x86_64/352.79/NVIDIA-Linux-x86_64-352.79.run
+ENV NVIDIA_DRIVERS_RUN http://us.download.nvidia.com/XFree86/Linux-x86_64/352.63/NVIDIA-Linux-x86_64-352.63.run
 
 RUN yum -y -q install \
   wget pciutils bzip2 vim && \
