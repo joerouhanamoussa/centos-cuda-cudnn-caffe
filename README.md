@@ -1,13 +1,9 @@
 # A Docker container with the NVIDIA drivers, CUDA Toolkit, cuDNN library and Caffe installed
 
-### Docker build arguments
-
-@param numCores the number of CPU cores used to compile Caffe
-
 ### Docker build example
 
 ```bash
-docker build -t centos-cuda-cudnn-caffe --build-arg numCores=24 .
+docker build -t centos-cuda-cudnn-caffe .
 ```
 
 ### Docker run examples
@@ -20,8 +16,8 @@ These commands can be used to verify that CUDA and Caffe work as expected:
 
 ```bash
 docker run ... nvidia-smi
-docker run ... /opt/deviceQuery
-docker run ... /opt/bandwidthTest
+docker run ... /opt/cuda-test/deviceQuery
+docker run ... /opt/cuda-test/bandwidthTest
 docker run ... /bin/bash -c "cd /opt/caffe; make runtest -j<number of cores>"
 docker run ... /bin/bash -c "cd /opt/caffe; ./examples/cifar10/train_quick.sh"
 ```
